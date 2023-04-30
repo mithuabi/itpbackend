@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const RepairSchema = new Schema({
-
     name: {
         type:String,
         required:true
@@ -13,7 +12,7 @@ const RepairSchema = new Schema({
         required:true
     },
     type:{
-        type:String,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        type:String,
         required:true
     },
     client: {
@@ -52,11 +51,11 @@ const RepairSchema = new Schema({
         type:String,
         required:true
     },
-    Status: {
+    status: {
         type:String,
         required:true
     }
-    
+
 })
 
 const Repair = mongoose.model("Repair", RepairSchema);

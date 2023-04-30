@@ -28,10 +28,7 @@ const URL = process.env.MONGODB_URL;
 mongoose.set("strictQuery", false);
 mongoose.connect(URL, () => {
   console.log("mongodb connection success!");
-
 });
-
-
 
 app.get("/", (req, res) => res.json(`Welcome to ${process.env.APP_NAME}.`));
 
