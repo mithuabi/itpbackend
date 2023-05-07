@@ -34,6 +34,8 @@ app.get("/", (req, res) => res.json(`Welcome to ${process.env.APP_NAME}.`));
 
 const RepairRouter = require("./routes/repairs.js");
 app.use("/repair", RepairRouter);
+const ClientRepairRouter = require("./routes/clientRepair");
+app.use("/client-repair", ClientRepairRouter);
 
  app.listen(PORT, () => {
     console.log(`Sever is up and running on port number : ${PORT}`);
